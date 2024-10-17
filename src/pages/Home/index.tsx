@@ -113,14 +113,14 @@ function Content() {
 // 主页面
 const Home: React.FC = () => {
   const [isShowPopup, setIsShowPopup] = useState(false)
-  // BUG 控制侧边栏是否显示
+  // BUG 
   function setShow() {
     setIsShowPopup(!isShowPopup)
   }
   return (
     // 页面
     <Page>
-        {/* 导航栏 */}
+      {/* 导航栏 */}
       <NavBar leftText={<LeftDom setShow={setShow} />} />
       {/* 侧边栏 */}
       <LeftPopup isShow={isShowPopup} setShow={setShow} />
