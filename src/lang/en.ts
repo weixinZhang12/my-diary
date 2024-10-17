@@ -9,6 +9,8 @@ const en:Lang={
     setting_style: "Style",
     setting_import_and_exort: "Import and export",
     setting_about: "About",
-    setting_langue: "langue"
+    setting_language: "Language",
+    setting_language_zh: "中文",
+    setting_language_en: "English"
 }
 export default en

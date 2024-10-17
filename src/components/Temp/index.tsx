@@ -4,7 +4,6 @@ import './index.scss'
 import { NavBar } from 'react-vant';
 
 const Setting: React.FC = () => {
-  const [isShowPopup, setIsShowPopup] = useState(false)
   
   return (
     // 页面

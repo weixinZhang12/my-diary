@@ -1,11 +1,8 @@
-import styleUtils from "./styleUtils"
+import preferenceUtils from "./prepferenceUtil"
 
 export default {
-    initStyle: () => {
-        const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches; // 是深色       console.log(isDark);
-
-        if (isDark) {
-          
-        }
+    initConfig: async () => {
+      const userConfigResult=await preferenceUtils.getUserConfig()
+      console.log(userConfigResult);
     }
 }

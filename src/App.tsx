@@ -34,9 +34,10 @@ import '@ionic/react/css/palettes/dark.system.css';
 import './theme/variables.css';
 import initUtils from './utils/initUtils';
 import Setting from './pages/Setting';
+import LanguageView from './pages/Setting/SettingView/Language';
 
 setupIonicReact();
-initUtils.initStyle()
+initUtils.initConfig()
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
@@ -46,6 +47,9 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/setting">
           <Setting />
+        </Route>
+        <Route exact path="/language">
+          <LanguageView />
         </Route>
         <Route exact path="/">
           <Redirect to="/home" />

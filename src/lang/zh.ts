@@ -9,6 +9,8 @@ const zh:Lang={
     setting_style: "样式",
     setting_import_and_exort: "导入导出",
     setting_about: "关于",
-    setting_langue: "语言"
+    setting_language: "语言",
+    setting_language_zh: "中文",
+    setting_language_en: "English"
 }
 export default zh

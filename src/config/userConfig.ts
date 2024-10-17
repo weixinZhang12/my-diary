@@ -1,4 +1,4 @@
-interface UserConfig{
+ export interface UserConfig{
     lang:'zh'|'en'
     theme:'default'
 }
