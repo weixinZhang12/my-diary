@@ -1,9 +1,9 @@
 interface UserConfig{
     lang:'zh'|'en'
-    theme:'light'|'dark'
+    theme:'default'
 }
 const userConfig:UserConfig={
     lang: 'zh',
-    theme: "light"
+    theme: 'default'
 }
 export default userConfig

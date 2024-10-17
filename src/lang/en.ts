@@ -1,9 +1,14 @@
 import { Lang } from "./langManger"
 
 const en:Lang={
-    home_left_img_text: 'img',
-    home_left_theme_text: "theme",
-    home_left_setting_text: "setting",
-    home_content_enpty_text: "You don't have any content yet"
+    home_left_popup_img_text: 'Img',
+    home_left_popup_theme_text: "Theme",
+    home_left_popup_setting_text: "Setting",
+    home_content_enpty_text: "You don't have any content yet",
+    setting_userinfo: "User Info",
+    setting_style: "Style",
+    setting_import_and_exort: "Import and export",
+    setting_about: "About",
+    setting_langue: "langue"
 }
 export default en

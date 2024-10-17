@@ -3,12 +3,16 @@ http://ionicframework.com/docs/theming/ */
 
 * {
     margin: 0;
+
 }
 /* 默认浅色背景 */
 :root {
     --background-color: #f6f8fc;
     --icon-color:#000;
     --rv-floating-ball-size:13vw;
+}
+body{
+    background-color: var(--background-color);
 }
 
 /* 深色模式 */
@@ -22,13 +26,17 @@ http://ionicframework.com/docs/theming/ */
         --rv-text-color: white;
         /* 默认边框颜色 */
         --rv-border-color: white;
-        /* 深色模式下的图标颜色 */
+        /* 深色模式下的自定义图标颜色 */
         --icon-color:#fff;
         --rv-card-header-color:#fff;
-        --rv-card-background-color: #021a32;
+        /* rv卡片背景色 */
+        --rv-card-background-color: #181a1b;
         /* 卡片字体颜色 */
         --rv-card-color:#fff;
-        --rv-cell-background-color: #0b1e31;
+        /* rv单元格背景色 */
+        --rv-cell-background-color: #181a1b;
+        /* rv导航栏图标颜色 */
+        --rv-nav-bar-icon-color:white;
     }
 }
 
@@ -36,5 +44,7 @@ http://ionicframework.com/docs/theming/ */
 @media (prefers-color-scheme: light) {
     :root {
         --background-color: #f6f8fc;
+        /* rv导航栏图标颜色 */
+        --rv-nav-bar-icon-color:black;
     }
 }       

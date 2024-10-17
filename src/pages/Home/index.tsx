@@ -1,4 +1,4 @@
-import styles from './index.module.scss';
+import styles from './index.module.scss'
 import { Card, Cell, Empty, Flex, FloatingBall, NavBar, Popup, Typography } from 'react-vant';
 import Page from '../../components/Page';
 import { CSSProperties, useEffect, useState } from 'react';
@@ -7,6 +7,7 @@ import { AddO, BrushO, Chat, PhotoO, SettingO, ShopO } from '@react-vant/icons';
 import Menu from '../../assets/images/Menu';
 import './index.scss'
 import { lang } from '../../lang/langManger';
+import { useIonRouter } from '@ionic/react';
 const css: CSSProperties = {
   background: ''
 }
@@ -31,6 +32,7 @@ function LeftDom(props: LeftDomInter) {
 }
 // 左侧边栏
 function LeftPopup(props: LeftPropsInter) {
+  const router=useIonRouter()
   const [isShow, setIsShow] = useState(props.isShow)
   // When first loaded,set show state to props,isShow
   // 当首次家在时自动执行，设置状态
@@ -43,11 +45,11 @@ function LeftPopup(props: LeftPropsInter) {
     <Popup visible={isShow} onClose={() => props.setShow()} position='left'>
       <div className={styles['left-popur-ccontainer']}>
         <Cell.Group title={'13145314223'} card>
-          <Cell title={lang.home_left_img_text} icon={<PhotoO />} />
-          <Cell title={lang.home_left_theme_text} icon={<BrushO />} />
+          <Cell title={lang.home_left_popup_img_text} icon={<PhotoO />} />
+          <Cell title={lang.home_left_popup_theme_text} icon={<BrushO />} />
         </Cell.Group>
         <Cell.Group title={''} card className={styles['popup-bottom-cell-group']}>
-          <Cell title={lang.home_left_setting_text} icon={<SettingO />} />
+          <Cell title={lang.home_left_popup_setting_text} onClick={()=>router.push('/setting','root','replace')} icon={<SettingO />} />
         </Cell.Group>
       </div>
     </Popup>
@@ -58,31 +60,30 @@ function Content() {
   const [cardList] = useState(
     [
       {
-        content: 'React Vant 是一套轻量、可靠的移动端 React 组件库，提供了丰富的基础组件和业务组件，帮助开发者快速搭建移动应用，使用过程中发现任何问题都可以提 Issue 给我们，当然，我们也非常欢迎你给我们发 PR。',
+        content: 'React Vant 是一套轻量、可靠的移动端 React 组件库，提供了丰富的基础组件和业务组件，帮助开发者快速搭建移动应用，使用过程中发现任何问题都可以提 Issue 给我们，当然，我们也非常欢迎你给我们发 PR。1',
 
       },
       {
-        content: 'React Vant 是一套轻量、可靠的移动端 React 组件库，提供了丰富的基础组件和业务组件，帮助开发者快速搭建移动应用，使用过程中发现任何问题都可以提 Issue 给我们，当然，我们也非常欢迎你给我们发 PR。',
+        content: 'React Vant 是一套轻量、可靠的移动端 React 组件库，提供了丰富的基础组件和业务组件，帮助开发者快速搭建移动应用，使用过程中发现任何问题都可以提 Issue 给我们，当然，我们也非常欢迎你给我们发 PR。11',
 
       },
       {
-        content: 'React Vant 是一套轻量、可靠的移动端 React 组件库，提供了丰富的基础组件和业务组件，帮助开发者快速搭建移动应用，使用过程中发现任何问题都可以提 Issue 给我们，当然，我们也非常欢迎你给我们发 PR。',
+        content: 'React Vant 是一套轻量、可靠的移动端 React 组件库，提供了丰富的基础组件和业务组件，帮助开发者快速搭建移动应用，使用过程中发现任何问题都可以提 Issue 给我们，当然，我们也非常欢迎你给我们发 PR。111',
 
       },
       {
-        content: 'React Vant 是一套轻量、可靠的移动端 React 组件库，提供了丰富的基础组件和业务组件，帮助开发者快速搭建移动应用，使用过程中发现任何问题都可以提 Issue 给我们，当然，我们也非常欢迎你给我们发 PR。',
+        content: 'React Vant 是一套轻量、可靠的移动端 React 组件库，提供了丰富的基础组件和业务组件，帮助开发者快速搭建移动应用，使用过程中发现任何问题都可以提 Issue 给我们，当然，我们也非常欢迎你给我们发 PR。1111'
+      },
+      {
+        content: 'React Vant 是一套轻量、可靠的移动端 React 组件库，提供了丰富的基础组件和业务组件，帮助开发者快速搭建移动应用，使用过程中发现任何问题都可以提 Issue 给我们，当然，我们也非常欢迎你给我们发 PR。111111',
 
       },
       {
-        content: 'React Vant 是一套轻量、可靠的移动端 React 组件库，提供了丰富的基础组件和业务组件，帮助开发者快速搭建移动应用，使用过程中发现任何问题都可以提 Issue 给我们，当然，我们也非常欢迎你给我们发 PR。',
+        content: 'React Vant 是一套轻量、可靠的移动端 React 组件库，提供了丰富的基础组件和业务组件，帮助开发者快速搭建移动应用，使用过程中发现任何问题都可以提 Issue 给我们，当然，我们也非常欢迎你给我们发 PR。11111111',
 
       },
       {
-        content: 'React Vant 是一套轻量、可靠的移动端 React 组件库，提供了丰富的基础组件和业务组件，帮助开发者快速搭建移动应用，使用过程中发现任何问题都可以提 Issue 给我们，当然，我们也非常欢迎你给我们发 PR。',
-
-      },
-      {
-        content: 'React Vant 是一套轻量、可靠的移动端 React 组件库，提供了丰富的基础组件和业务组件，帮助开发者快速搭建移动应用，使用过程中发现任何问题都可以提 Issue 给我们，当然，我们也非常欢迎你给我们发 PR。',
+        content: 'React Vant 是一套轻量、可靠的移动端 React 组件库，提供了丰富的基础组件和业务组件，帮助开发者快速搭建移动应用，使用过程中发现任何问题都可以提 Issue 给我们，当然，我们也非常欢迎你给我们发 PR。111111111111',
 
       },
     ]
@@ -100,7 +101,7 @@ function Content() {
       : <div className="home-content-container-card-container">
         
         {cardList.map((item)=>{
-         return <Card round className='home-content-container-card-container-card'>
+         return <Card round key={item.content}  className='home-content-container-card-container-card'>
           <Card.Body>
             <Typography.Text ellipsis={4}>{item.content}</Typography.Text>
           </Card.Body>
