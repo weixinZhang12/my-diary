@@ -1,0 +1,32 @@
+
+* {
+    margin: 0;
+}
+
+:root {
+    --background-color: #1d4caa;
+    --icon-color:#000;
+}
+
+/* 深色模式 */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #f60000;
+        --rv-white: rgb(183, 23, 23);
+        --rv-text-color: rgb(255, 65, 65);
+        --rv-border-color: rgb(181, 39, 39);
+        --icon-color:#e59696;
+    }
+}
+
+/* 浅色模式 */
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-color: #1f57c6;
+        --background-color: #f60000;
+        --rv-white: rgb(183, 23, 23);
+        --rv-text-color: rgb(255, 65, 65);
+        --rv-border-color: rgb(181, 39, 39);
+        --icon-color:#e59696;
+    }
+}       
